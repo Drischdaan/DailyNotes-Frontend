@@ -9,6 +9,10 @@
   </a>
 </p>
 
+## Production
+
+[Production URL](https://dayli-notes.firebaseapp.com/)
+
 ## Installation
 
 ```bash
