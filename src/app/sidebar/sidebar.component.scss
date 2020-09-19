@@ -1,0 +1,65 @@
+:host::ng-deep.sidebar.p-panel {
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 20rem;
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s ease-in-out;
+
+    .p-panel-header {
+        display: none;
+    }
+
+    .p-toggleable-content {
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+        max-height: 100vh;
+        border-radius: 0px !important;
+        border: none;
+
+        .p-panel-content {
+           @extend .p-toggleable-content;
+        }
+    }
+}
+
+.sidebar {
+    &-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 47px;
+        background-color: var(--surface-c);
+        color: var(--primary-color);
+
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    &-subtitle {
+        display: flex;
+        justify-content: center;
+
+        height: 23px;
+        background-color: var(--surface-c);
+        color: gray;
+
+        font-size: 12px;
+    }
+    &-list {
+        padding: 20px 0px;
+        width: 100%;
+
+        &-item {
+            width: 100%;
+
+            button {
+                width: 100%;
+                display: block;
+            }
+        }
+
+    }
+}

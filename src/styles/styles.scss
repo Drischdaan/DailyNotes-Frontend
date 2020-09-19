@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Oswald:200,300,400,500,600,700|Roboto:100,300,400,500,700,900&display=swap");
+
+$fg-font-primary: 'Lato', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $fg-font-primary;
+}
+
+
+html {
+    font-size: 14px;
+}
+
+body {
+    background-color: #121212;
+}
