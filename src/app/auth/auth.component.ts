@@ -29,17 +29,15 @@ export class AuthComponent implements OnInit {
   }
 
   switchMode() {
+    this.showMessage(undefined);
     this.loginMode = !this.loginMode;
   }
 
   onSubmit(form: NgForm) {
-    this.showMessage(undefined);
-
-    const url: string = this.loginMode ? 'https://dayli-notes.herokuapp.com/v1/auth/login' : 'https://dayli-notes.herokuapp.com/v1/auth/register';
+    const url: string = this.loginMode ? 'https://daily-notes-api.herokuapp.com/v1/auth/login' : 'https://daily-notes-api.herokuapp.com/v1/auth/register';
     this.http.post(url, form.value, { headers: new HttpHeaders({ 'Access-Control-Allow-Origin': '*' }) })
       .subscribe((responseData: any) => {
         this.showMessage(responseData.data.message, '#34d657');
-
         if(this.loginMode === false) {
           if(responseData.data.success === true)
           this.switchMode();

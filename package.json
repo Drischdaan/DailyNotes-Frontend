@@ -1,5 +1,5 @@
 {
-  "name": "dayli-notes-frontend",
+  "name": "daily-notes-frontend",
   "version": "0.0.1-DEV-SNAPSHOT",
   "scripts": {
     "ng": "ng",
