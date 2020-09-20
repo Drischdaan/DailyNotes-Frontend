@@ -11,7 +11,7 @@
 
 ## Production
 
-[Production URL](https://dayli-notes.firebaseapp.com/)
+[Production URL](https://daily-notes-1beaa.firebaseapp.com/)
 
 ## Installation
 
