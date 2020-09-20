@@ -1,10 +1,1 @@
-<div class="p-grid" style="margin: 0 !important; padding: 0 !important;">
-    <dn-sidebar></dn-sidebar>
-    <div class="p-col" style="margin: 0 !important; padding: 0 !important;">
-        <p-menubar styleClass="menubar">
-            <button pButton pRipple type="button" label="USERNAME" icon="pi pi-user" class="p-button-rounded p-button-text p-button-info" (click)="menu.toggle($event)"></button>
-            <p-menu #menu [popup]="true" [model]="accountMenuItems"></p-menu>
-        </p-menubar>
-    </div>
-</div>
-<p-toast styleClass="toast-modify"></p-toast>
+<router-outlet></router-outlet>

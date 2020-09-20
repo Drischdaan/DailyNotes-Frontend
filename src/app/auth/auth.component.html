@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="form-wrapper">
+        <h1 class="form-title">{{ loginMode ? 'Login' : 'Sign Up' }}</h1>
+        <p [class]="message === 'none' ? 'opacity' : ''" [ngStyle]="{ color: color }" class="message">{{ message }}</p>
+        <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+            <div class="input-wrapper">
+                <span class="p-float-label">
+                    <input pInputText id="username" name="username" type="text" ngModel required minlength="3" maxlength="25">
+                    <label for="username">Username</label>
+                </span>
+                <span class="p-float-label" style="margin-top: 10px;">
+                    <input pInputText id="password" name="password" type="password" ngModel required minlength="8" maxlength="25">
+                    <label for="password">Password</label>
+                </span>
+            </div>
+            <button pButton pRipple [label]="loginMode ? 'Login' : 'Sign Up'" type="submit" [disabled]="!authForm.valid"></button>
+        </form>
+        <p class="switcher">{{ loginMode ? 'Don\'t have an account? Register' : 'You already have an account? Login' }} <a class="switcher-clickable" (click)="switchMode()">here</a></p>
+    </div>
+</div>

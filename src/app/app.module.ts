@@ -15,14 +15,26 @@ import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {PanelModule} from 'primeng/panel';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes';
+import { HomeComponent } from './home/home.component';
+import { AuthComponent } from './auth/auth.component';
+import { FormsModule } from '@angular/forms';
+import {CheckboxModule} from 'primeng/checkbox';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
+    SidebarComponent,
+    DashboardComponent,
+    HomeComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     RippleModule,
     MenubarModule,
@@ -32,9 +44,12 @@ import {PanelModule} from 'primeng/panel';
     TabMenuModule,
     SidebarModule,
     ToastModule,
-    PanelModule
+    PanelModule,
+    FormsModule,
+    CheckboxModule,
+    HttpClientModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
